@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="fa-IR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>آشنایی با زبان Go | دوره آموزشی back-end دیوار</title>
+    <meta name="description" content="">
+    <link rel="icon" href="/divar-backend-course/favicon.png">
+    
+    <link rel="preload" href="/divar-backend-course/assets/css/0.styles.fca2b89e.css" as="style"><link rel="preload" href="/divar-backend-course/assets/js/app.5df85f72.js" as="script"><link rel="preload" href="/divar-backend-course/assets/js/2.15bccd6b.js" as="script"><link rel="preload" href="/divar-backend-course/assets/js/10.0b553bf3.js" as="script"><link rel="prefetch" href="/divar-backend-course/assets/js/11.f6878dff.js"><link rel="prefetch" href="/divar-backend-course/assets/js/12.bb411c5b.js"><link rel="prefetch" href="/divar-backend-course/assets/js/13.1bbf0aa3.js"><link rel="prefetch" href="/divar-backend-course/assets/js/14.631bdd7a.js"><link rel="prefetch" href="/divar-backend-course/assets/js/15.ee5e7602.js"><link rel="prefetch" href="/divar-backend-course/assets/js/16.5e068667.js"><link rel="prefetch" href="/divar-backend-course/assets/js/17.ebb2ee22.js"><link rel="prefetch" href="/divar-backend-course/assets/js/18.e84e5535.js"><link rel="prefetch" href="/divar-backend-course/assets/js/19.9019b592.js"><link rel="prefetch" href="/divar-backend-course/assets/js/20.5c88cb6e.js"><link rel="prefetch" href="/divar-backend-course/assets/js/21.6c44b5c6.js"><link rel="prefetch" href="/divar-backend-course/assets/js/3.7af8c2e2.js"><link rel="prefetch" href="/divar-backend-course/assets/js/4.813a2721.js"><link rel="prefetch" href="/divar-backend-course/assets/js/5.adc36d38.js"><link rel="prefetch" href="/divar-backend-course/assets/js/6.48238d53.js"><link rel="prefetch" href="/divar-backend-course/assets/js/7.50dd109a.js"><link rel="prefetch" href="/divar-backend-course/assets/js/8.fc4ebc1c.js"><link rel="prefetch" href="/divar-backend-course/assets/js/9.93103164.js">
+    <link rel="stylesheet" href="/divar-backend-course/assets/css/0.styles.fca2b89e.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/divar-backend-course/" class="home-link router-link-active"><img src="/divar-backend-course/logo.png" alt="دوره آموزشی back-end دیوار" class="logo"> <span class="site-name can-hide">دوره آموزشی back-end دیوار</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="https://careers.divar.ir/positions#department=Engineering" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  فرصت‌های شغلی
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://divar.ir/about" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  دربارهٔ دیوار
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <a href="https://github.com/pouyapayandeh/divar-backend-course" target="_blank" rel="noopener noreferrer" class="repo-link">
+    github
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="https://careers.divar.ir/positions#department=Engineering" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  فرصت‌های شغلی
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://divar.ir/about" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  دربارهٔ دیوار
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <a href="https://github.com/pouyapayandeh/divar-backend-course" target="_blank" rel="noopener noreferrer" class="repo-link">
+    github
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><a href="/divar-backend-course/course/intro.html" class="sidebar-link">به دیوار خوش اومدی!</a></li><li><a href="/divar-backend-course/course/bash.html" class="sidebar-link">آشنایی با Bash Script</a></li><li><a href="/divar-backend-course/course/python-intro.html" class="sidebar-link">آشنایی با پایتون</a></li><li><a href="/divar-backend-course/course/network-intro.html" class="sidebar-link">آشنایی با شبکه</a></li><li><a href="/divar-backend-course/course/vc.html" class="sidebar-link">کنترل نسخه</a></li><li><a href="/divar-backend-course/course/proje1.html" class="sidebar-link">پروژه Ubuntu Paste</a></li><li><a href="/divar-backend-course/course/db.html" class="sidebar-link">دیتابیس</a></li><li><a href="/divar-backend-course/course/backup.html" class="sidebar-link">بکاپ گیری</a></li><li><a href="/divar-backend-course/course/rest.html" class="sidebar-link">سرویس های Restful</a></li><li><a href="/divar-backend-course/course/proje-drf.html" class="sidebar-link">پروژه DRF</a></li><li><a href="/divar-backend-course/course/go-intro.html" class="active sidebar-link">آشنایی با زبان Go</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/divar-backend-course/course/go-intro.html#همروندی-در-go" class="sidebar-link">همروندی در Go</a></li></ul></li><li><a href="/divar-backend-course/course/grpc-go.html" class="sidebar-link">مایکروسرویس gRPC با Go</a></li><li><a href="/divar-backend-course/course/docker-intro.html" class="sidebar-link">آشنایی با Docker</a></li><li><a href="/divar-backend-course/course/kube.html" class="sidebar-link">کوبرنتیز</a></li><li><a href="/divar-backend-course/course/owasp.html" class="sidebar-link">آشنایی با OWASP</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="آشنایی-با-زبان-go"><a href="#آشنایی-با-زبان-go" class="header-anchor">#</a> آشنایی با زبان Go</h1> <p>از اونجایی که توی خیلی از تیم‌ها از زبان Go برای کارهای سمت back-end استفاده می‌شه خوبه که از قبل با این زبان و قابلیت‌هاش آشنا باشی.</p> <h3 id="اهداف"><a href="#اهداف" class="header-anchor">#</a> اهداف</h3> <ul><li>آشنایی با syntax زبان گو</li></ul> <h3 id="برای-مطالعه"><a href="#برای-مطالعه" class="header-anchor">#</a> برای مطالعه</h3> <ul><li>برای آشنایی با این زبان این <a href="https://tour.golang.org/" target="_blank" rel="noopener noreferrer">tutorial<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> رو دنبال کن. (تا سر concurrency)</li></ul> <h3 id="تمرین"><a href="#تمرین" class="header-anchor">#</a> تمرین</h3> <ul><li>با زبان گو یک فایل <a href="https://drive.google.com/open?id=1naU7nUECQDjvlbGcwWm8ohcmEN17Mmwg" target="_blank" rel="noopener noreferrer">csv<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> که مشخصات نمرات یک سری دانشجو است را بخوانید و با استفاده از پکیج <a href="https://golang.org/pkg/database/sql/" target="_blank" rel="noopener noreferrer">SQL<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> آنرا داخل یک دیتابیس بنویسید. سپس کوئری های زیر را روی آن اجرا کنید.</li></ul> <p>۱. لیست دانشجویانی که حداقل یک نمره ۲۰ داشته اند</p> <p>۲. لیست درس‌هایی که هیچکس در آن نمره زیر ۱۰ نداشته است</p> <h2 id="همروندی-در-go"><a href="#همروندی-در-go" class="header-anchor">#</a> همروندی در Go</h2> <h3 id="اهداف-2"><a href="#اهداف-2" class="header-anchor">#</a> اهداف</h3> <ul><li>آشنایی با مدل همروندی در Go</li> <li>آشنایی با goroutine</li> <li>آشنایی با go channels</li> <li>آشنایی با practice های همروندی</li></ul> <p>مهم ترین ویژگی زبان Go قابلیت‌های منحصر به فرد این زبان در همروندی است.</p> <h3 id="برای-مطالعه-2"><a href="#برای-مطالعه-2" class="header-anchor">#</a> برای مطالعه</h3> <ul><li>برای آشنایی با این قبالیت ها <a href="https://tour.golang.org/concurrency/1" target="_blank" rel="noopener noreferrer">ادامه<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> A Tour of Go که مبحث Concurrency پرداخته شده را با دقت بیشتر مطالعه کنید. توی این <a href="https://blog.golang.org/pipelines" target="_blank" rel="noopener noreferrer">پست<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> هم میتونید راجع به الگوهای هم روندی توی Go بخونید. راجع به پکیج context توی Go هم خوبه که بدونید. توی این <a href="http://p.agnihotry.com/post/understanding_the_context_package_in_golang/" target="_blank" rel="noopener noreferrer">پست<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> توضیحات خوبی داده شده.</li></ul> <h3 id="تمرین-2"><a href="#تمرین-2" class="header-anchor">#</a> تمرین</h3> <ol><li>فرض کنید یک تابع داریم که اسم id یک اپلیکیشن را از ورودی می‌گیرد و اطلاعات آن را از cache پیدا می‌کند. ما سه نوع cache داریم. cache اول بسیار سریع ولی حجم آن کم است و به احتمال بالایی اپلیکیشن آن جا نخواهد بود. cache دوم کمی کندتر است و به احتمال معقولی جواب ما را دارد. cache سوم کند است ولی صددرصد جواب ما را دارد. کد زیر به ترتیب لایه‌های cache را فراخوانی می‌کند و اگر جواب ما در آن لایه نبود سراغ لایه بعدی می‌رود. با استفاده از goroutine و go channel کدی بنویسید که به صورت موازی تمام لایه‌های cache را فراخوانی کند و به محض جواب دادن اولین لایه مقدار آن را return کند.</li></ol> <div class="language-go extra-class"><pre class="language-go"><code><span class="token keyword">package</span> main
+
+<span class="token keyword">import</span> <span class="token punctuation">(</span>
+  <span class="token string">&quot;fmt&quot;</span>
+  <span class="token string">&quot;github.com/pkg/errors&quot;</span>
+  <span class="token string">&quot;math/rand&quot;</span>
+  <span class="token string">&quot;time&quot;</span>
+<span class="token punctuation">)</span>
+
+<span class="token keyword">var</span> ErrNotFound <span class="token operator">=</span> errors<span class="token punctuation">.</span><span class="token function">New</span><span class="token punctuation">(</span><span class="token string">&quot;app not found&quot;</span><span class="token punctuation">)</span>
+
+<span class="token keyword">type</span> App <span class="token keyword">struct</span> <span class="token punctuation">{</span>
+  Name   <span class="token builtin">string</span>
+  source <span class="token builtin">string</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">type</span> CacheLayer <span class="token keyword">interface</span> <span class="token punctuation">{</span>
+  <span class="token function">Get</span><span class="token punctuation">(</span>key <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">(</span>App<span class="token punctuation">,</span> <span class="token builtin">error</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">type</span> cacheLayerImpl1 <span class="token keyword">struct</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token punctuation">(</span>cacheLayerImpl1<span class="token punctuation">)</span> <span class="token function">Get</span><span class="token punctuation">(</span>packageName <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">(</span>App<span class="token punctuation">,</span> <span class="token builtin">error</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  delay <span class="token operator">:=</span> time<span class="token punctuation">.</span><span class="token function">Duration</span><span class="token punctuation">(</span>rand<span class="token punctuation">.</span><span class="token function">Intn</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">40</span><span class="token punctuation">)</span> <span class="token operator">*</span> time<span class="token punctuation">.</span>Millisecond
+  time<span class="token punctuation">.</span><span class="token function">Sleep</span><span class="token punctuation">(</span>delay<span class="token punctuation">)</span>
+
+  <span class="token keyword">if</span> rand<span class="token punctuation">.</span><span class="token function">Intn</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token number">10</span> <span class="token punctuation">{</span>
+     <span class="token keyword">return</span> App<span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> ErrNotFound
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">return</span> App<span class="token punctuation">{</span>
+     Name<span class="token punctuation">:</span>   <span class="token string">&quot;App-1&quot;</span><span class="token punctuation">,</span>
+     source<span class="token punctuation">:</span> <span class="token string">&quot;cache-1&quot;</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token boolean">nil</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">type</span> cacheLayerImpl2 <span class="token keyword">struct</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token punctuation">(</span>cacheLayerImpl2<span class="token punctuation">)</span> <span class="token function">Get</span><span class="token punctuation">(</span>packageName <span class="token builtin">string</span><span class="token punctuation">)</span>  <span class="token punctuation">(</span>App<span class="token punctuation">,</span> <span class="token builtin">error</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  delay <span class="token operator">:=</span> time<span class="token punctuation">.</span><span class="token function">Duration</span><span class="token punctuation">(</span>rand<span class="token punctuation">.</span><span class="token function">Intn</span><span class="token punctuation">(</span><span class="token number">50</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">100</span><span class="token punctuation">)</span> <span class="token operator">*</span> time<span class="token punctuation">.</span>Millisecond
+  time<span class="token punctuation">.</span><span class="token function">Sleep</span><span class="token punctuation">(</span>delay<span class="token punctuation">)</span>
+
+  <span class="token keyword">if</span> rand<span class="token punctuation">.</span><span class="token function">Intn</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token number">70</span> <span class="token punctuation">{</span>
+     <span class="token keyword">return</span> App<span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> ErrNotFound
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> App<span class="token punctuation">{</span>
+     Name<span class="token punctuation">:</span>   <span class="token string">&quot;App-1&quot;</span><span class="token punctuation">,</span>
+     source<span class="token punctuation">:</span> <span class="token string">&quot;cache-2&quot;</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token boolean">nil</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">type</span> cacheLayerImpl3 <span class="token keyword">struct</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token punctuation">(</span>cacheLayerImpl3<span class="token punctuation">)</span> <span class="token function">Get</span><span class="token punctuation">(</span>packageName <span class="token builtin">string</span><span class="token punctuation">)</span>  <span class="token punctuation">(</span>App<span class="token punctuation">,</span> <span class="token builtin">error</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  delay <span class="token operator">:=</span> time<span class="token punctuation">.</span><span class="token function">Duration</span><span class="token punctuation">(</span>rand<span class="token punctuation">.</span><span class="token function">Intn</span><span class="token punctuation">(</span><span class="token number">5000</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">500</span><span class="token punctuation">)</span> <span class="token operator">*</span> time<span class="token punctuation">.</span>Millisecond
+  time<span class="token punctuation">.</span><span class="token function">Sleep</span><span class="token punctuation">(</span>delay<span class="token punctuation">)</span>
+
+  <span class="token keyword">return</span> App<span class="token punctuation">{</span>
+     Name<span class="token punctuation">:</span>   <span class="token string">&quot;App-1&quot;</span><span class="token punctuation">,</span>
+     source<span class="token punctuation">:</span> <span class="token string">&quot;cache-3&quot;</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token boolean">nil</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">type</span> DataProvider <span class="token keyword">struct</span> <span class="token punctuation">{</span>
+  CacheLayers <span class="token punctuation">[</span><span class="token punctuation">]</span>CacheLayer
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">NewDataProvider</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span>DataProvider<span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token operator">&amp;</span>DataProvider<span class="token punctuation">{</span>
+     CacheLayers<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>CacheLayer<span class="token punctuation">{</span>
+        <span class="token operator">&amp;</span>cacheLayerImpl1<span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token operator">&amp;</span>cacheLayerImpl2<span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token operator">&amp;</span>cacheLayerImpl3<span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+     <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token punctuation">(</span>d <span class="token operator">*</span>DataProvider<span class="token punctuation">)</span> <span class="token function">GetData</span><span class="token punctuation">(</span>packageName <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">(</span>App<span class="token punctuation">,</span> <span class="token builtin">error</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">for</span> <span class="token boolean">_</span><span class="token punctuation">,</span> cacheLayer <span class="token operator">:=</span> <span class="token keyword">range</span> d<span class="token punctuation">.</span>CacheLayers <span class="token punctuation">{</span>
+     <span class="token keyword">if</span> app<span class="token punctuation">,</span> err <span class="token operator">:=</span> cacheLayer<span class="token punctuation">.</span><span class="token function">Get</span><span class="token punctuation">(</span>packageName<span class="token punctuation">)</span><span class="token punctuation">;</span> err <span class="token operator">==</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> app<span class="token punctuation">,</span> <span class="token boolean">nil</span>
+     <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">return</span> App<span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> ErrNotFound
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  rand<span class="token punctuation">.</span><span class="token function">Seed</span><span class="token punctuation">(</span>time<span class="token punctuation">.</span><span class="token function">Now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">UnixNano</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  dataProvider <span class="token operator">:=</span> <span class="token function">NewDataProvider</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  startTime <span class="token operator">:=</span> time<span class="token punctuation">.</span><span class="token function">Now</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  result<span class="token punctuation">,</span> err <span class="token operator">:=</span> dataProvider<span class="token punctuation">.</span><span class="token function">GetData</span><span class="token punctuation">(</span><span class="token string">&quot;ir.divar&quot;</span><span class="token punctuation">)</span>
+  delay <span class="token operator">:=</span> <span class="token operator">-</span>time<span class="token punctuation">.</span><span class="token function">Until</span><span class="token punctuation">(</span>startTime<span class="token punctuation">)</span>
+  fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">&quot;Result: %v\nErr: %v\nDelay: %v&quot;</span><span class="token punctuation">,</span> result<span class="token punctuation">,</span> err<span class="token punctuation">,</span> delay<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><ol start="2"><li>در کافه‌بازار برای به دست آوردن اطلاعات صفحه اپلیکیشن سرویس AppDetail سه سرویس دیگر را فراخوانی می‌کند تا اپ‌های مشابه، اپ‌های مرتبط و اپ‌های پیشنهادی را به کاربر نشان دهد. این کد این رفتار را شبیه سازی کرده است.</li></ol> <div class="language-go extra-class"><pre class="language-go"><code>    <span class="token keyword">package</span> main
+
+    <span class="token keyword">import</span> <span class="token punctuation">(</span>
+      <span class="token string">&quot;fmt&quot;</span>
+      <span class="token string">&quot;math/rand&quot;</span>
+      <span class="token string">&quot;time&quot;</span>
+    <span class="token punctuation">)</span>
+
+    <span class="token keyword">type</span> AppDetail <span class="token keyword">struct</span> <span class="token punctuation">{</span>
+      Name <span class="token builtin">string</span>
+      Apps <span class="token punctuation">[</span><span class="token punctuation">]</span>App
+    <span class="token punctuation">}</span>
+    <span class="token keyword">type</span> App <span class="token keyword">struct</span><span class="token punctuation">{</span>
+      Name <span class="token builtin">string</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">func</span> <span class="token function">getRelatedApps</span><span class="token punctuation">(</span>packageName <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>App <span class="token punctuation">{</span>
+      time<span class="token punctuation">.</span><span class="token function">Sleep</span><span class="token punctuation">(</span><span class="token number">5</span> <span class="token operator">*</span> time<span class="token punctuation">.</span>Millisecond<span class="token punctuation">)</span>
+      <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>App<span class="token punctuation">{</span>
+         <span class="token punctuation">{</span><span class="token string">&quot;Related-App-1&quot;</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+         <span class="token punctuation">{</span><span class="token string">&quot;Related-App-2&quot;</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+         <span class="token punctuation">{</span><span class="token string">&quot;Related-App-3&quot;</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">func</span> <span class="token function">getSimilarApps</span><span class="token punctuation">(</span>packageName <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>App <span class="token punctuation">{</span>
+      time<span class="token punctuation">.</span><span class="token function">Sleep</span><span class="token punctuation">(</span><span class="token number">300</span> <span class="token operator">*</span> time<span class="token punctuation">.</span>Millisecond<span class="token punctuation">)</span>
+      <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>App<span class="token punctuation">{</span>
+         <span class="token punctuation">{</span><span class="token string">&quot;Similar-App-1&quot;</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+         <span class="token punctuation">{</span><span class="token string">&quot;Similar-App-2&quot;</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+         <span class="token punctuation">{</span><span class="token string">&quot;Similar-App-3&quot;</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">func</span> <span class="token function">getRecommendedApps</span><span class="token punctuation">(</span>packageName <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>App <span class="token punctuation">{</span>
+      time<span class="token punctuation">.</span><span class="token function">Sleep</span><span class="token punctuation">(</span>time<span class="token punctuation">.</span><span class="token function">Duration</span><span class="token punctuation">(</span>rand<span class="token punctuation">.</span><span class="token function">Intn</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">*</span> time<span class="token punctuation">.</span>Second<span class="token punctuation">)</span>
+      <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>App<span class="token punctuation">{</span>
+         <span class="token punctuation">{</span><span class="token string">&quot;Recommended-App-1&quot;</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+         <span class="token punctuation">{</span><span class="token string">&quot;Recommended-App-2&quot;</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+         <span class="token punctuation">{</span><span class="token string">&quot;Recommended-App-3&quot;</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">func</span> <span class="token function">getAppDetail</span><span class="token punctuation">(</span>packageName <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token operator">*</span>AppDetail <span class="token punctuation">{</span>
+      <span class="token keyword">var</span> apps <span class="token punctuation">[</span><span class="token punctuation">]</span>App
+      apps <span class="token operator">=</span> <span class="token function">append</span><span class="token punctuation">(</span>apps<span class="token punctuation">,</span> <span class="token function">getRelatedApps</span><span class="token punctuation">(</span>packageName<span class="token punctuation">)</span><span class="token operator">...</span><span class="token punctuation">)</span>
+      apps <span class="token operator">=</span> <span class="token function">append</span><span class="token punctuation">(</span>apps<span class="token punctuation">,</span> <span class="token function">getSimilarApps</span><span class="token punctuation">(</span>packageName<span class="token punctuation">)</span><span class="token operator">...</span><span class="token punctuation">)</span>
+      apps <span class="token operator">=</span> <span class="token function">append</span><span class="token punctuation">(</span>apps<span class="token punctuation">,</span> <span class="token function">getRecommendedApps</span><span class="token punctuation">(</span>packageName<span class="token punctuation">)</span><span class="token operator">...</span><span class="token punctuation">)</span>
+
+      <span class="token keyword">return</span> <span class="token operator">&amp;</span>AppDetail<span class="token punctuation">{</span>
+         Name<span class="token punctuation">:</span> <span class="token string">&quot;App-1&quot;</span><span class="token punctuation">,</span>
+         Apps<span class="token punctuation">:</span> apps<span class="token punctuation">,</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      rand<span class="token punctuation">.</span><span class="token function">Seed</span><span class="token punctuation">(</span>time<span class="token punctuation">.</span><span class="token function">Now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">UnixNano</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+      startTime <span class="token operator">:=</span> time<span class="token punctuation">.</span><span class="token function">Now</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+      result <span class="token operator">:=</span> <span class="token function">getAppDetail</span><span class="token punctuation">(</span><span class="token string">&quot;ir.divar&quot;</span><span class="token punctuation">)</span>
+      delay <span class="token operator">:=</span> <span class="token operator">-</span>time<span class="token punctuation">.</span><span class="token function">Until</span><span class="token punctuation">(</span>startTime<span class="token punctuation">)</span>
+      fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">&quot;Result: %v\nDelay: %v&quot;</span><span class="token punctuation">,</span> result<span class="token punctuation">,</span> delay<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+</code></pre></div><p>کد بالا را طوری تغییر دهید که فراخوانی سه سرویس هم‌زمان صورت گیرد. (مواظب رخ دادن race condition باشید)</p> <ol start="3"><li><p>همانطور که در کد مشاهده می‌کنید گرفتن برنامه‌های پیشنهادی ممکن است تا ۲ ثانیه طول بکشد. با استفاده از context جواب مثال قبل را طوری تغییر دهید که تابع getAppDetail حداکثر یک ثانیه زمان ببرد و اگر بیشتر طول کشید لیست برنامه ها را ناقص برگرداند.</p></li> <li><p>در کد زیر یک تابع به اسم produce به صورت میانگین هر نیم‌ثانیه یک Task داخل یک channel قرار می‌دهد و سه تابع به اسم consume آن تسک را از داخل channel برمی‌دارند و به صورت میانگین در ۱ و نیم‌ثانیه روی آن پردازش انجام می‌دهند. برنامه با ctrl+c متوقف می‌شود. کد تابع consume را طوری تغییر دهید که با متوقف شدن برنامه هیچ taskی نباشد که شروع شده اما تمام نشده باشد. یعنی تا تمام شدن همه‌ی تسک‌های شروع شده برنامه خاتمه پیدا نکند. برای این کار باید به سیگنال termination گوش دهید.</p></li></ol> <div class="language-go extra-class"><pre class="language-go"><code><span class="token keyword">package</span> main
+
+<span class="token keyword">import</span> <span class="token punctuation">(</span>
+  <span class="token string">&quot;fmt&quot;</span>
+  <span class="token string">&quot;github.com/google/uuid&quot;</span>
+  <span class="token string">&quot;math/rand&quot;</span>
+  <span class="token string">&quot;os&quot;</span>
+  <span class="token string">&quot;os/signal&quot;</span>
+  <span class="token string">&quot;syscall&quot;</span>
+  <span class="token string">&quot;time&quot;</span>
+<span class="token punctuation">)</span>
+
+<span class="token keyword">type</span> Task <span class="token keyword">struct</span> <span class="token punctuation">{</span>
+  Id <span class="token builtin">string</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">consume</span><span class="token punctuation">(</span>taskChan <span class="token keyword">chan</span> Task<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">for</span> task <span class="token operator">:=</span> <span class="token keyword">range</span> taskChan<span class="token punctuation">{</span>
+     <span class="token comment">// do job</span>
+     fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">&quot;Job %s started\n&quot;</span><span class="token punctuation">,</span> task<span class="token punctuation">.</span>Id<span class="token punctuation">)</span>
+     time<span class="token punctuation">.</span><span class="token function">Sleep</span><span class="token punctuation">(</span>time<span class="token punctuation">.</span><span class="token function">Duration</span><span class="token punctuation">(</span>rand<span class="token punctuation">.</span><span class="token function">Intn</span><span class="token punctuation">(</span><span class="token number">3000</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">*</span> time<span class="token punctuation">.</span>Millisecond<span class="token punctuation">)</span>
+     fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">&quot;Job %s finished\n&quot;</span><span class="token punctuation">,</span> task<span class="token punctuation">.</span>Id<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">dispatch</span><span class="token punctuation">(</span>taskChan <span class="token keyword">chan</span> Task<span class="token punctuation">,</span> stop <span class="token keyword">chan</span> <span class="token builtin">bool</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">go</span> <span class="token function">consume</span><span class="token punctuation">(</span>taskChan<span class="token punctuation">)</span>
+  <span class="token keyword">go</span> <span class="token function">consume</span><span class="token punctuation">(</span>taskChan<span class="token punctuation">)</span>
+  <span class="token keyword">go</span> <span class="token function">consume</span><span class="token punctuation">(</span>taskChan<span class="token punctuation">)</span>
+
+  <span class="token operator">&lt;-</span> stop
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">produce</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">chan</span> Task <span class="token punctuation">{</span>
+  taskChan <span class="token operator">:=</span> <span class="token function">make</span><span class="token punctuation">(</span><span class="token keyword">chan</span> Task<span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span>
+  <span class="token keyword">go</span> <span class="token keyword">func</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+     <span class="token keyword">for</span> <span class="token punctuation">{</span>
+        time<span class="token punctuation">.</span><span class="token function">Sleep</span><span class="token punctuation">(</span>time<span class="token punctuation">.</span><span class="token function">Duration</span><span class="token punctuation">(</span>rand<span class="token punctuation">.</span><span class="token function">Intn</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">*</span> time<span class="token punctuation">.</span>Millisecond<span class="token punctuation">)</span>
+        taskChan <span class="token operator">&lt;-</span> Task<span class="token punctuation">{</span>
+           Id<span class="token punctuation">:</span> uuid<span class="token punctuation">.</span><span class="token function">New</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">String</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span>
+     <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token keyword">return</span> taskChan
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  sigs <span class="token operator">:=</span> <span class="token function">make</span><span class="token punctuation">(</span><span class="token keyword">chan</span> os<span class="token punctuation">.</span>Signal<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+  signal<span class="token punctuation">.</span><span class="token function">Notify</span><span class="token punctuation">(</span>sigs<span class="token punctuation">,</span> syscall<span class="token punctuation">.</span>SIGINT<span class="token punctuation">,</span> syscall<span class="token punctuation">.</span>SIGTERM<span class="token punctuation">)</span>
+  done <span class="token operator">:=</span> <span class="token function">make</span><span class="token punctuation">(</span><span class="token keyword">chan</span> <span class="token builtin">bool</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+
+  <span class="token keyword">go</span> <span class="token keyword">func</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+     sig <span class="token operator">:=</span> <span class="token operator">&lt;-</span>sigs
+     fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">&quot;Signal received. Program is going to stop...&quot;</span><span class="token punctuation">)</span>
+     fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>sig<span class="token punctuation">)</span>
+     done <span class="token operator">&lt;-</span> <span class="token boolean">true</span>
+  <span class="token punctuation">}</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  taskChan <span class="token operator">:=</span> <span class="token function">produce</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token function">dispatch</span><span class="token punctuation">(</span>taskChan<span class="token punctuation">,</span> done<span class="token punctuation">)</span>
+
+  fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">&quot;Program is going to close&quot;</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">آخرین بروزرسانی:</span> <span class="time">۱۴۰۰/۱/۲۴،‏ ۱۱:۰۶:۳۷</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/divar-backend-course/course/proje-drf.html" class="prev">پروژه DRF</a></span> <span class="next"><a href="/divar-backend-course/course/grpc-go.html">مایکروسرویس gRPC با Go</a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/divar-backend-course/assets/js/app.5df85f72.js" defer></script><script src="/divar-backend-course/assets/js/2.15bccd6b.js" defer></script><script src="/divar-backend-course/assets/js/10.0b553bf3.js" defer></script>
+  </body>
+</html>
